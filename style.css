@@ -1,0 +1,562 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+*{
+ font-family: "Pixelify Sans", sans-serif;;
+}
+html {
+    background: #02021a;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #02021a;
+    color: #ffffff;
+    position: relative;
+    isolation: isolate;
+}
+
+/* MIDNIGHT HORIZON */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -40px;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 15%,
+            rgba(0, 90, 255, 0.42) 0%,
+            rgba(0, 45, 150, 0.30) 28%,
+            transparent 65%
+        ),
+        radial-gradient(
+            ellipse at 15% 75%,
+            rgba(80, 20, 180, 0.30) 0%,
+            transparent 48%
+        ),
+        radial-gradient(
+            ellipse at 85% 80%,
+            rgba(230, 95, 35, 0.20) 0%,
+            transparent 42%
+        ),
+        linear-gradient(
+            to bottom,
+            #02021a 0%,
+            #05082b 30%,
+            #03051c 65%,
+            #000008 100%
+        );
+
+    filter: blur(35px);
+    transform: translateZ(0);
+}
+
+/* background color */
+
+.shooting-star {
+    position: absolute;
+    top: -10%;
+    left: 70%;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #9edcff,
+        white
+    );
+    border-radius: 50%;
+    opacity: 0;
+    transform: rotate(45deg);
+    animation: shooting 4s linear infinite;
+    filter: drop-shadow(0 0 6px #70bfff);
+}
+
+
+.shooting-star:nth-child(1) {
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+    left: 45%;
+    animation-delay: 2.5s;
+}
+
+.shooting-star:nth-child(3) {
+    left: 75%;
+    animation-delay: 1.2s;
+}
+
+.shooting-star:nth-child(4) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+.shooting-star:nth-child(5) {
+    left: 60%;
+    animation-delay: 6s;
+}
+
+
+@keyframes shooting {
+    0% {
+        transform: translate(0, 0) rotate(45deg);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translate(-350px, 350px) rotate(45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-350px, 350px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Keep your actual website above the sky */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+.navbar nav ul li a:visited{
+    color:white;
+}
+
+.navbar ul {
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 4px;
+    padding: 5px 6px;
+    gap: 72px;
+    list-style: none;
+}
+.navbar ul li a:hover{
+    text-decoration: underline;
+}
+.online{
+    color: green;
+    display: flex;
+    justify-content: end;
+    margin: -45px 4px;
+    font-size: larger;
+}
+.intro{
+    display: flex;
+    align-items: center;
+    padding: 60px 5px;
+    margin: 60px 5px;
+    font-weight: bold;
+    font-size: 30px;
+    flex-direction: column;
+}
+.subtitles{
+    color: rgb(68, 79, 202);
+    margin: 44px 17px;
+}
+.avatar img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    margin: -31px 523px;
+    padding: 5px 6px;
+    border: 13px solid rgb(11, 14, 73) ;
+}
+/* ABOUT ME SECTION */
+.level1 .aboutme{
+    display: flex;
+    font-size: 70px;
+}
+.level1 .description{
+    display: flex;
+    gap: 2px;
+    margin: 22px 4px;
+    color: rgb(253, 252, 254);
+    font-size: 20px;
+}
+
+.level2 .projects{
+    font-size: 70px;
+    margin: 50px 4px;
+}
+.description2 ul li{
+    margin: 4px 0px;
+    font-size: 30px;
+    color: red;
+
+}
+.lan{
+    display: flex;
+    margin: 4px 39px;
+    font-size: 20px;
+    color: rgb(106, 175, 106);
+}
+.level3 .skills{
+     font-size: 70px;
+    margin: 50px 4px;
+}
+.level3 .python {
+    display: flex;
+    margin: 4px 2px;
+    font-size: 30px;
+    
+}
+.level3 .coding{
+    font-size: large;
+    color: rgb(47, 214, 66);
+}
+.level3 .tools{
+    display: flex;
+    margin: 52px 2px;
+    font-size: 30px;
+}
+.level3 .github{
+    display: flex;
+    width: 55px;
+    filter: invert(1);
+    margin: 6px 54px;
+    gap: 20px;
+}
+
+.final .contact{
+    font-size: 70px;
+    margin: 100px 4px;
+}
+.final .linkedin{
+    margin: 4px 5px;
+    font-size: 30px;
+    color: grey;
+}
+.final .linkedin img{
+    width: 100px;
+    filter: invert(1);
+    margin: -28px 75px;
+}
+.final .github2 {
+    margin: 86px 6px;
+    font-size: 30px;
+    color: gray;
+
+}
+.final .github2 img{
+    width: 100px;
+    filter: invert(1);
+    margin: -28px 102px;
+}
+.final .gmail{
+    margin: 4px 5px;
+    font-size: 30px;
+    color: grey;
+}
+.final .gmail img{
+    width: 100px;
+    filter: invert(1);
+    margin: -28px 117px;
+}
+footer{
+    margin: 64px 19px;
+}
+footer .desgined{
+    display: flex;
+    justify-content: right;
+}
+/* Normal desktop CSS */
+h1 {
+    font-size: 60px;
+}
+
+
+
+/* =====================================
+   RESPONSIVE CSS — MOBILE & TABLET
+   Existing CSS ko change mat karna
+===================================== */
+
+/* Prevent horizontal scrolling */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar ul {
+        gap: 25px;
+        flex-wrap: wrap;
+        margin: 12px 0;
+        padding: 10px;
+    }
+
+    .online {
+        justify-content: center;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    /* HERO SECTION */
+    .intro {
+        font-size: 24px;
+        padding: 35px 15px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .avatar img {
+        width: 140px;
+        margin: 0 auto;
+    }
+
+    .subtitles {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    /* SECTION HEADINGS */
+    .level1 .aboutme,
+    .level2 .projects,
+    .level3 .skills,
+    .final .contact {
+        font-size: 48px;
+        margin: 35px 15px;
+        overflow-wrap: anywhere;
+    }
+
+    /* ABOUT */
+    .level1 .description {
+        font-size: 17px;
+        margin: 20px 15px;
+        line-height: 1.7;
+    }
+
+    .level1 .description li {
+        padding-left: 4px;
+    }
+
+    /* PROJECTS */
+    .description2 {
+        margin: 20px 15px;
+    }
+
+    .description2 ul {
+        padding-left: 25px;
+    }
+
+    .description2 ul li {
+        font-size: 23px;
+        overflow-wrap: anywhere;
+    }
+
+    .lan {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 10px 15px;
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .description2 p {
+        margin: 15px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    /* SKILLS */
+    .level3 .python {
+        font-size: 23px;
+        flex-wrap: wrap;
+        margin: 10px 15px;
+    }
+
+    .level3 .tools {
+        font-size: 23px;
+        flex-wrap: wrap;
+        margin: 35px 15px;
+    }
+
+    .level3 .github {
+        width: 45px;
+        gap: 15px;
+        margin: 10px 20px;
+    }
+
+    /* CONTACT */
+    .final .linkedin,
+    .final .github2,
+    .final .gmail {
+        font-size: 18px;
+        margin: 35px 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .final .linkedin img,
+    .final .github2 img,
+    .final .gmail img {
+        width: 35px;
+        margin: 0 10px;
+        vertical-align: middle;
+    }
+
+    footer {
+        margin: 40px 15px;
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+
+/* MOBILE PHONES */
+@media screen and (max-width: 480px) {
+
+    /* NAVBAR */
+    .navbar ul {
+        gap: 12px 18px;
+        justify-content: center;
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+
+    .online {
+        font-size: 14px;
+    }
+
+    /* HERO */
+    .intro {
+        font-size: 18px;
+        padding: 25px 10px;
+    }
+
+    .intro h1 {
+        font-size: clamp(28px, 8vw, 38px);
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    .avatar img {
+        width: 115px;
+        border-width: 8px;
+        padding: 4px;
+    }
+
+    .subtitles {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    /* HEADINGS */
+    .level1 .aboutme,
+    .level2 .projects,
+    .level3 .skills,
+    .final .contact {
+        font-size: clamp(28px, 8vw, 36px);
+        margin: 30px 12px;
+        line-height: 1.3;
+    }
+
+    /* ABOUT */
+    .level1 .description {
+        font-size: 15px;
+        margin: 15px 12px;
+        line-height: 1.8;
+    }
+
+    /* PROJECTS */
+    .description2 {
+        margin: 20px 10px;
+    }
+
+    .description2 ul li {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .lan {
+        margin: 10px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .description2 p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 12px 10px;
+    }
+
+    /* SKILLS */
+    .level3 .python {
+        font-size: 18px;
+        margin: 10px 12px;
+    }
+
+    .level3 .coding {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .level3 .tools {
+        font-size: 20px;
+        margin: 25px 12px;
+    }
+
+    .level3 .github {
+        width: 35px;
+        gap: 12px;
+        margin: 10px 15px;
+    }
+
+    /* CONTACT */
+    .final .linkedin,
+    .final .github2,
+    .final .gmail {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 28px 12px;
+    }
+
+    .final .linkedin img,
+    .final .github2 img,
+    .final .gmail img {
+        width: 28px;
+        margin: 0 5px;
+    }
+
+    footer {
+        font-size: 11px;
+        line-height: 1.8;
+        margin: 30px 10px;
+    }
+
+    section {
+        scroll-margin-top: 20px;
+    }
+}
